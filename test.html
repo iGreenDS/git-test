@@ -9,14 +9,52 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
      <!-- Additional CSS must be placed after Bootstrap CSS -->
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
    <link rel="stylesheet" href="css/styles.css" />
     <title>NuCamp: A Better Way To Camp</title>
+   
+      
+  </style>
+
 </head>
 
 <body>
+
+
+  to get accordian behavior, where opening another, closes the last. Add a wrapper div, and then give each collpsable child the attribute, data-parent="selector"
+  the button or link must have a data-toggle='collapse' and either a data-target="#collapseOne" or href pointing to the same.
+
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+  <div class="container">
+      <div id="accordion">
+         
+          <p>
+              <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+            </p>
+            <div class="row">
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1" data-parent="#accordian">
+                  <div class="card card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample2" data-parent="#accordian">
+                  <div class="card card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+  </div>
 
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -28,6 +66,80 @@
             </div> 
         </div>
     </header>
+
+    
+<!--TABS DISPLAY-->
+    <div class="container">
+      <div class="row row-content">
+          <div class="col">
+            <h3>Community Partners</h3>
+            <ul class="nav nav-tabs">
+                <li class="nav-item"> 
+                    <a class="nav-link active" href="#bootstrap" role="tab" data-toggle="tab">Bootstrap Outfitters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#git" role="tab" data-toggle="tab">Git Out Expeditions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#mongo" role="tab" data-toggle="tab">Mongo Fly Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#node" role="tab" data-toggle="tab">Node Outdoor Apparel</a>
+                </li>
+            </ul>
+                    
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade show active" id="bootstrap">
+                        <h4>Bootstrap Outfitters <small>Outdoor Gear Specialists</small></h4>
+                        <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="git">
+                        <h4>Git Out Expeditions <small>Group Adventure Expeditions</small></h4>
+                        <p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="mongo">
+                        <h4>Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop.</small></h4>
+                        <p class="d-none d-sm-block">Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="node">
+                        <h4>Node Outdoor Apparel <small>Outdoor Clothes & Shoes</small></h4>
+                        <p class="d-none d-sm-block">From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.</p>
+                    </div>
+                </div>
+          </div>
+      </div>
+   </div>
+<div class="row row-content">
+  <div class="col-sm-6 mx-auto">
+          <div class="card" >
+                <div class="card-header bg-info text-white">
+                  <h3>Reserve a Campsite</h3>
+                </div>
+                <div class="card-body">
+                    <form>
+                            <div class="row">
+                              <label for="NoC">Number of Campers</label>
+                                <select class="form-control" id="NoC" name="NoC" placeholder="Select">
+                                  <option selected>Select...</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                  <option value="6">6</option>
+                                </select>                    
+
+                            </div>
+                            <div class="row">
+
+                            </div>         
+                    </form>
+                </div><!--card body-->
+          </div><!--card-->
+    </div><!--col-->
+  </div><!--row-->
+            
+   
 
     <div class="d-flex p-2 bg-light">I'm a flexbox container!</div>
 
@@ -43,6 +155,15 @@
         <div class="p-2 bg-info">Flex item 1</div>
         <div class="p-2 bg-warning">Flex item 2</div>
         <div class="p-2 bg-primary">Flex item 3</div>
+      </div>
+
+      <div class="media">
+        <img src="img/react-lake-thumb.jpg" class="align-self-start mr-3" alt="...">
+        <div class="media-body">
+          <h5 class="mt-0">Top-aligned media</h5>
+          <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+          <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </div>
       </div>
 
       <div class="container mt-3">
@@ -116,12 +237,27 @@
                 </div>
            </div>
         </div>
+
+        
+
     </footer>
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 </body>
 
